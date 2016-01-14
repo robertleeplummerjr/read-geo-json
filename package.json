@@ -1,0 +1,27 @@
+{
+  "name": "read-geo-json",
+  "version": "1.0.0",
+  "description": "an easy means of reading a geojson file in js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertleeplummerjr/read-geo-json.git"
+  },
+  "keywords": [
+    "json",
+    "geo",
+    "geojson",
+    "js",
+    "easy",
+    "read"
+  ],
+  "author": "robertleeplummerjr@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertleeplummerjr/read-geo-json/issues"
+  },
+  "homepage": "https://github.com/robertleeplummerjr/read-geo-json#readme"
+}
