@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/robertleeplummerjr/read-geo-json/issues"
   },
-  "homepage": "https://github.com/robertleeplummerjr/read-geo-json#readme"
+  "homepage": "https://github.com/robertleeplummerjr/read-geo-json#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^8.1.1"
+  }
 }

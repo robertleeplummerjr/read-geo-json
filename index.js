@@ -5,7 +5,8 @@ var defaults = {
   eachMultiPoint: null,
   eachMultiLineString: null,
   eachMultiPolygon: null,
-  eachGeometryCollection: null
+  eachGeometryCollection: null,
+  verbose: false
 };
 
 function readGeoJSON(geoJson, settings) {
@@ -34,6 +35,8 @@ function readGeoJSON(geoJson, settings) {
       feature.geometries.forEach(function(geometry) {
         eachGeometry(geometry, feature, featureCollection);
       });
+    } else if (feature.hasOwnProperty('coordinates')) {
+      eachGeometry(feature);
     }
   }
 
@@ -44,7 +47,9 @@ function readGeoJSON(geoJson, settings) {
       case 'function': fn(geometry, feature, featureCollection); break;
       case 'undefined': throw new Error('unknown type: ' + (geometry.type || 'empty')); break;
       default:
-        console.log('unhandled type: ' + geometry.type);
+        if (settings.verbose) {
+          console.log('unhandled type: ' + geometry.type);
+        }
     }
   }
 }
